@@ -2765,3 +2765,8 @@ ul.breadcrumb li:last-child {
     padding: 10px 12px;
   }
 }
+body {
+  background: url("https://cdn.luogu.com.cn/upload/image_hosting/2fr7r8wx.png") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
