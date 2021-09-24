@@ -2766,7 +2766,64 @@ ul.breadcrumb li:last-child {
   }
 }
 body {
-  background: url("https://cdn.luogu.com.cn/upload/image_hosting/2fr7r8wx.png") no-repeat;
+  background: url("https://cdn.luogu.com.cn/upload/image_hosting/cvk6qjnj.png") no-repeat;
+  background-size: contain;
   background-attachment: fixed;
-  background-size: cover;
+  background-position: 50% 50%;
+}
+.heimu,
+.heimu a,
+a .heimu,
+.heimu a.new {
+  background-color: #252525;
+  color: #252525;
+  text-shadow: none;
+}
+.heimu:hover,
+.heimu:active,
+.heimu:hover .heimu,
+.heimu:active .heimu {
+  color: #fff !important;
+}
+.heimu:hover a,
+a:hover .heimu,
+.heimu:active a,
+a:active .heimu {
+  color: #add8e6 !important;
+}
+.heimu:hover .new,
+.heimu .new:hover,
+.new:hover .heimu,
+.heimu:active .new,
+.heimu .new:active,
+.new:active .heimu {
+  color: #ba0000 !important;
+}
+.baimu,
+.baimu a,
+a .baimu,
+.baimu a.new {
+  background-color: #fff;
+  color: #808080;
+  text-shadow: none;
+}
+.baimu:hover,
+.baimu:active,
+.baimu:hover .baimu,
+.baimu:active .baimu {
+  color: #000 !important;
+}
+.baimu:hover a,
+a:hover .baimu,
+.baimu:active a,
+a:active .baimu {
+  color: #add8e6 !important;
+}
+.baimu:hover .new,
+.baimu .new:hover,
+.new:hover .baimu,
+.baimu:active .new,
+.baimu .new:active,
+.new:active .baimu {
+  color: #ba0000 !important;
 }
