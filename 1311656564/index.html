@@ -117,7 +117,7 @@
       
       
       <div class="post-body">
-          <hr>
+          <hr />
 <br/>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ModuledPoly</span> &#123;</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> maxD = <span class="number">1e2</span> + <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">int</span> a[maxD], d;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">detect</span><span class="params">()</span> </span>&#123; <span class="keyword">for</span> (d = maxD - <span class="number">1</span>; d &amp;&amp; !a[d]; --d); &#125;</span><br><span class="line">    ModuledPoly&amp; <span class="keyword">operator</span> /=(<span class="keyword">const</span> ModuledPoly &amp;rhs) &#123;</span><br><span class="line">        <span class="keyword">int</span> inv = <span class="built_in">fpow</span>(rhs.a[rhs.d], modn - <span class="number">2</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = d; i &gt;= rhs.d; --i) <span class="keyword">if</span> (a[i]) &#123;</span><br><span class="line">            <span class="keyword">int</span> v = <span class="number">1ll</span> * a[i] * inv % modn;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &gt;= i - rhs.d; --j) &#123;</span><br><span class="line">                a[j] = <span class="built_in">smod</span>(a[j] - <span class="number">1ll</span> * rhs.a[j - i + rhs.d] * v % modn);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">detect</span>(), *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">ModuledPoly* <span class="title">gcd</span><span class="params">(ModuledPoly *a, ModuledPoly *b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!b-&gt;d &amp;&amp; !b-&gt;a[<span class="number">0</span>]) <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">return</span> (*a) /= (*b), <span class="built_in">gcd</span>(b, a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       </div>
@@ -182,6 +182,11 @@
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha256-e8fkE+LP8R8PMyAaC6jji0vzbcvXB0WnNxM/19zvcdU=" crossorigin="anonymous">
 
 
 
